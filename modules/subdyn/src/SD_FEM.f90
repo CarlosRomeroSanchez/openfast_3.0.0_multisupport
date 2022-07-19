@@ -2266,6 +2266,11 @@ SUBROUTINE ElemF(ep, gravity, Fg, Fo)
    REAL(ReKi), INTENT(IN)     :: gravity       !< acceleration of gravity
    REAL(FEKi), INTENT(OUT)    :: Fg(12)
    REAL(FEKi), INTENT(OUT)    :: Fo(12)
+   ! Add parameters SLPM
+   REAL(ReKi) :: A     !< area
+   REAL(ReKi) :: L     !< element length
+   REAL(ReKi) :: rho   !< density
+   REAL(FEKi) :: DirCos(3,3)      !< From element to global: xg = DC.xe,  Kg = DC.Ke.DC^t
    if (ep%eType==idMemberBeam) then
       Fo(1:12)=0.0_FEKi
    else if (ep%eType==idMemberCable) then
@@ -2273,9 +2278,18 @@ SUBROUTINE ElemF(ep, gravity, Fg, Fo)
    else if (ep%eType==idMemberRigid) then
       Fo(1:12)=0.0_FEKi
    else if (ep%eType==idMemberSLPM) then
-      Fo(1:12)=0.0_FEKi   
+      Fo(1:12)=0.0_FEKi
    endif
+   ! Add SLPM Case gravity=0
+   if (ep%eType==idMemberSLPM) then
+   A=0.0_REKi
+   L=0.0_REKi
+   rho=0.0_REKi
+   DirCos=0.0_FEKi
+   CALL ElemG(A,L,rho,DirCos, Fg, gravity )
+   else
    CALL ElemG( eP%Area, eP%Length, eP%rho, eP%DirCos, Fg, gravity )
+   endif
 END SUBROUTINE ElemF
 
 !> Return skew symmetric matrix
