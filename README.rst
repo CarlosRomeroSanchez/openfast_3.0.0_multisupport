@@ -13,7 +13,7 @@ In order to be able to use these features, the following changes have been intro
 3.  **Seismic Input File**, in the examples *seismic\_input.dat*.
 4.  The *SLPM Coefficients* are indicated in File *SubDyn.dat*, in the line *Simplified LPM-Type members properties*. The SLPM member must have *Flag.1 = SLPM*.
 
-Multi-support sismic input motions are assumed (i.e., if there exists more than una support, all of them experience the same foundation input motion). On the other hand, the parameters that define the SLPM must be obtained by fitting the target impedance functions.
+Uniform sismic input motions are assumed (i.e., if there exists more than una support, all of them experience the same foundation input motion). On the other hand, the parameters that define the SLPM must be obtained by fitting the target impedance functions.
 
 The original version of OpenFAST 3.0.0 can be found here [OpenFAST v3.0.0](https://github.com/OpenFAST/openfast/releases/tag/v3.0.0)
 
