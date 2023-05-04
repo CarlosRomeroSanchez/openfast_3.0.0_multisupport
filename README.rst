@@ -3,8 +3,8 @@ Modified version OpenFAST v3.0.0
 
 This repository contains a modified version of OpenFAST 3.0.0 in which the Subdyn module has been modified to include the two following features:
 
--   Seismic foundation input motions at the base of the support structure.
--   A dynamic soil-structure interaction model that employs a Simplified Lumped Parameter Model \[1\] to represent the lateral, vertical, rocking and torsional impedances of the foundation.
+-   Multi-support Seismic foundation input motions at the base of the support structure. \[1\]
+-   A dynamic soil-structure interaction model that employs a Simplified Lumped Parameter Model \[2\] to represent the lateral, vertical, rocking and torsional impedances of the foundation.  \[3\]
 
 In order to be able to use these features, the following changes have been introduced into the OpenFAST input files:
 
@@ -17,9 +17,11 @@ Uniform sismic input motions are assumed (i.e., if there exists more than una su
 
 The original version of OpenFAST 3.0.0 can be found here [OpenFAST v3.0.0](https://github.com/OpenFAST/openfast/releases/tag/v3.0.0)
 
-\[1\] Carbonari S., Morici M., Dezi F., Leoni G., A lumped parameter model for timedomain inertial soil-structure interaction analysis of structures on pile foundations , Earthquake Engineering & Structural Dynamics, Vol. 47, 2147-2171.(2018)
+\[1\] Romero-Sánchez C. and Padrón L.A., An Implementation of Multi-Support Seismic Input Motion into OpenFAST for the Earthquake Analysis of Offshore Wind Turbines. Computational Methods in Structural Dynamics and Eartquake Engineering, COMPDYN 2023.
 
-\[2\] Romero-Sánchez C. and Padrón L.A., Implementation of Ground Input Motion and Dynamic Soil-Structure Interaction into Openfast for the Seismic Analysis of Offshore Wind Turbines. Congress on Numerical Methods in Engineering, CMN 2022.
+\[2\] Carbonari S., Morici M., Dezi F., Leoni G., A lumped parameter model for timedomain inertial soil-structure interaction analysis of structures on pile foundations , Earthquake Engineering & Structural Dynamics, Vol. 47, 2147-2171.(2018)
+
+\[3\] Romero-Sánchez C. and Padrón L.A., Implementation of Ground Input Motion and Dynamic Soil-Structure Interaction into Openfast for the Seismic Analysis of Offshore Wind Turbines. Congress on Numerical Methods in Engineering, CMN 2022.
 
 Financing: 
 ========
