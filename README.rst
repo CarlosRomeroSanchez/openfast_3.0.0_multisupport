@@ -3,8 +3,8 @@ Modified version OpenFAST v3.0.0
 
 This repository contains a modified version of OpenFAST 3.0.0 in which the Subdyn module has been modified to include the two following features:
 
--   Multi-support Seismic foundation input motions at the base of the support structure. \[1\]
--   A dynamic soil-structure interaction model that employs a Simplified Lumped Parameter Model \[2\] to represent the lateral, vertical, rocking and torsional impedances of the foundation.  \[3\]
+-   Multi-support Seismic foundation input motions at the base of the support structure \[1\].
+-   A dynamic soil-structure interaction model that employs a Simplified Lumped Parameter Model \[2\] to represent the lateral, vertical, rocking and torsional impedances of the foundation \[3\].
 
 In order to be able to use these features, the following changes have been introduced into the OpenFAST input files:
 
@@ -25,9 +25,18 @@ The original version of OpenFAST 3.0.0 can be found here [OpenFAST v3.0.0](https
 
 Financing: 
 ========
+   
+This work has been developed with the support of research projects:
 
--   ProID2020010025, funded by Consejerı́a de Economı́a, Conocimiento y Empleo (Agencia Canaria de la Investigación. Innovación y Sociedad de la Información) of the Gobierno de Canarias and FEDER;
+* PID2020-120102RB-I00, funded by the Agencial Estatal de Investigación of Spain, MCIN/AEI/10.13039/501100011033.
 
-   <p align="center">
-    <img src="docs/img/gobcan-fse.png">
-   </p>
+<p align="center">
+   <img src="docs/img/miciinn-aei.png">
+</p>
+
+* ProID2020010025, funded by Consejerı́a de Economı́a, Conocimiento y Empleo (Agencia Canaria de la Investigación. Innovación y Sociedad de la Información) of the Gobierno de Canarias and FEDER;
+
+<p align="center">
+   <img src="docs/img/gobcan-fse.png">
+</p>
+
